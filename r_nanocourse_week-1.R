@@ -16,6 +16,7 @@ install.packages("RColorBrewer") # color palettes for figures
 require(data.table)
 require(plyr)
 require(ggplot2)
+require(reshape2)
 require(limma)
 require(edgeR)
 require(GEOquery)
@@ -107,7 +108,7 @@ viz_2 = ggplot(pca_df, aes(x = PC1, y = PC3, fill = pheno$characteristics_ch1.8)
   xlab(x_var_label) + # x axis label
   ylab(z_var_label) # y axis label
 
-# pc3 vs pc3
+# pc2 vs pc3
 viz_3 = ggplot(pca_df, aes(x = PC2, y = PC3, fill = pheno$characteristics_ch1.8)) + # set up basic plot aesthetics 
   geom_point(pch=21, stroke=0.2, size=2.5) + # make scatterplot 
   scale_fill_brewer("Sequencing plate", palette = 'Set1') +
@@ -168,7 +169,7 @@ batch_viz_2 = ggplot(pca_df, aes(x = PC1, y = PC3, fill = pheno_sub$characterist
   xlab(x_var_label) + # x axis label
   ylab(z_var_label) # y axis label
 
-# pc3 vs pc3
+# pc2 vs pc3
 batch_viz_3 <- ggplot(pca_df, aes(x = PC2, y = PC3, fill = pheno_sub$characteristics_ch1.8)) +
   geom_point(pch=21, stroke=0.2, size=2.5) +
   scale_fill_manual("Sequencing plate", values = set1_colors) +
