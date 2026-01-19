@@ -1,4 +1,4 @@
-##My Fork of [Upstate-R-Nanocourse-SP26](https://github.com/hessJ/Upstate-R-Nanocourse-SP26)
+## My Fork of [Upstate-R-Nanocourse-SP26](https://github.com/hessJ/Upstate-R-Nanocourse-SP26)
 
 At present, just addresses minor issues with provided script.
 
